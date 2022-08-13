@@ -4,10 +4,10 @@ import Header from './components/Header.js'
 import ProgressTab from './components/ProgressTab.js';
 import FormHeader from './components/FormHeader.js';
 import Button from './components/Button.js';
-import logo from './Img/logo.jpg';
-import pic1 from './Img/For Myself.jpg';
-import pic2 from './Img/workwithteam.jpg';
-import pic3 from './Img/congratulaations.jpg';
+import logo from './assets/logo.jpg';
+import pic1 from './assets/For Myself.jpg';
+import pic2 from './assets/workwithteam.jpg';
+import pic3 from './assets/congratulaations.jpg';
 
 
 function App() {

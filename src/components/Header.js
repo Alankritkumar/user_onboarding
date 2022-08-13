@@ -1,17 +1,17 @@
-const Header = ({title, logo}) => {
+const Header = ({ title, logo }) => {
   return (
-    <header>
-      <h1 className="HeaderFont" >
-        <span><img src={logo} /> </span>
-        <span>{title}</span>
+    <div className="header">
+      <img className="headerLogo" src={logo} />
+      <h1 className="headerLabel" >
+        {title}
       </h1>
-    </header>
+    </div>
   )
 }
 
-Header.defaultProps ={
-title:'',
-logo:'',
+Header.defaultProps = {
+  title: '',
+  logo: '',
 }
 
 export default Header

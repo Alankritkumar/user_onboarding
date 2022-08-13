@@ -1,6 +1,10 @@
-
-
-const Form = ({ step,pic1,pic2 }) => {
+const Form = ({ step, pic1, pic2 }) => {
+    const onCLickSelectionBox = (evt) => {
+        evt.currentTarget.parentElement.childNodes.forEach(function (node) {
+            node.classList.remove('focus')
+        });
+        evt.currentTarget.classList.add('focus');
+    }
 
     if (step == 1) {
         return (
@@ -38,33 +42,33 @@ const Form = ({ step,pic1,pic2 }) => {
     } else if (step == 3) {
         return (
             <>
-                <div className="input-group">
-                    <label>
-                        <input type="radio" name="select" />
-                        <span>
-                            <br /> <img src={pic1} />
-                            <br />For myself
-                            <br /> Write better. Think
+                <div className="selectionBoxContainer">
+                    <div id='selectionBox1' className="selectionBox" onClick={(evt) => onCLickSelectionBox(evt)}>
+                        <div>
+                            <img src={pic1} />
+                        </div>
+                        <div style={{ fontWeight: "bold" }}>For myself</div>
+                        <div><br /> Write better. Think
                             <br />more clearly. Stay
-                            <br />organized</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="select" />
-                        <span>
-                            <br /> <img src={pic2} />
-                            <br />With my team
-                            <br />wikis, docs, tasks &
+                            <br />organized</div>
+                    </div>
+                    <div id='selectionBox2' className="selectionBox" onClick={(evt) => onCLickSelectionBox(evt)}>
+                        <div> <img src={pic2} /></div>
+                        <div style={{ fontWeight: "bold" }}>With my team</div>
+                        <div><br />wikis, docs, tasks &
                             <br />projects, all in one
-                            <br />place</span>
-                    </label>
+                            <br />place</div>
+                    </div>
                 </div>
+
             </>
         )
-    } 
+    }
 }
-Form.defaultProps={
-    step:1,
-    pic1:'',
-    pic2:'',
+
+Form.defaultProps = {
+    step: 1,
+    pic1: '',
+    pic2: '',
 }
 export default Form

@@ -1,13 +1,28 @@
  @import url('https://fonts.googleapis.com/css?family=Inter');
 
  .container {
-     width: 50%;
+     width: 36%;
  }
 
- .HeaderFont {
+ .header {
+     display: flex;
+     justify-content: center;
+     margin: 15px 0px;
+ }
+
+ .headerLabel {
      font-family: 'Inter';
      font-size: larger;
      text-align: center;
+     margin: 0px;
+     margin-left: 5px;
+     display: flex;
+     align-self: center;
+ }
+
+ .headerLogo {
+     height: 25px;
+     width: 25px;
  }
 
  .progressbar {
@@ -88,21 +103,27 @@
      text-align: center;
  }
 
- input[type=radio] {
-     margin: 40px;
-     border: 1px solid rgb(197 197 197);
-     padding: 5.0em;
-     -webkit-appearance: none;
+ .selectionBoxContainer {
+     display: flex;
+     justify-content: center;
+ }
+
+ .selectionBox {
+     border-radius: 10px;
+     border: 1px solid #d2d3d0;
+     padding: 20px;
+     width: 200px;
+     height: 200px;
+     margin: 20px;
+ }
+
+ .focus {
+     border-color: rgb(0, 0, 0);
  }
 
  .input-group {
      justify-content: center;
  }
-
- input:checked {
-     border-color: rgb(0, 0, 0);
- }
-
 
  label span:first-of-type {
      position: relative;
