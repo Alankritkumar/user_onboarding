@@ -1,5 +1,4 @@
 const Button = ({ StepIncrement, step }) => {
-    
     return (
         <div>
             <button type="submit" className="btn btn-primary" 

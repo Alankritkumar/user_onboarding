@@ -5,7 +5,6 @@ const Form = ({ step, pic1, pic2 }) => {
         });
         evt.currentTarget.classList.add('focus');
     }
-
     if (step == 1) {
         return (
             <>
@@ -60,7 +59,6 @@ const Form = ({ step, pic1, pic2 }) => {
                             <br />place</div>
                     </div>
                 </div>
-
             </>
         )
     }
